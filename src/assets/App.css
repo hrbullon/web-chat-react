@@ -1,6 +1,10 @@
-body {
+/* body {
   background: rgb(158,18,189);
   background: linear-gradient(90deg, rgba(158,18,189,1) 0%, rgba(121,9,96,0.8995973389355743) 50%, rgba(255,0,56,1) 100%);
+} */
+
+body {
+  background: #c6c5ca !important;
 }
 
 .App-logo {
@@ -16,9 +20,9 @@ body {
 
 .App-header {
   
-  background: rgb(158,18,189);
+  /* background: rgb(158,18,189);
   background: linear-gradient(90deg, rgba(158,18,189,1) 0%, rgba(121,9,96,0.8995973389355743) 50%, rgba(255,0,56,1) 100%);
-  min-height: 100vh;
+ */  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

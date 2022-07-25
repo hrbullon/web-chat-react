@@ -11,24 +11,35 @@ import { Header } from './components/Header';
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
 import { Chat } from './pages/Chat';
+import { Container } from 'react-bootstrap';
+import { UserContext } from './context/UserContext';
+import { useId } from 'react';
 
 function App() {
 
+  const userModel = {
+    id: useId(),
+    name: "John Doe",
+    email: "jdoe@gmail.com"
+  };
+
   return (
-    <div className="App">
-      <div className="container">
+    <>
+      <UserContext.Provider value={ userModel }>
         <Header></Header>
-        <div class="row mt-5">
-          <div class="col col-12">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="chat/:code" element={<Chat />} />
-            </Routes>
+        <Container className='mt-5'>
+          <div className="row">
+            <div className="col col-12">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="chat/:code" element={<Chat />} />
+              </Routes>
+            </div>
           </div>
-        </div>
-      </div>   
-    </div>
+        </Container>
+      </UserContext.Provider>
+    </>
   );
 }
 
