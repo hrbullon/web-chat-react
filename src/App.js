@@ -9,7 +9,7 @@ import { Header } from './components/Header';
 
 //pages
 import { Home } from './pages/Home';
-import { Contact } from './pages/Contact';
+import { Contact } from './pages/contacts/Contacts';
 import { Chat } from './pages/Chat';
 import { Container } from 'react-bootstrap';
 import { UserContext } from './context/UserContext';
